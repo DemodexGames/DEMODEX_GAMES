@@ -1,0 +1,9 @@
+.glitch-screen.active{opacity:1;background:#050605;animation:glitch-burst .46s steps(1,end) forwards}
+.glitch-screen.active:before{opacity:1;background:repeating-linear-gradient(0deg,transparent 0 7px,#a5ed2266 7px 9px,transparent 9px 17px),linear-gradient(90deg,transparent 0 10%,#05f4efaa 10% 13%,transparent 13% 42%,#ff174dcc 42% 47%,transparent 47% 78%,#a5ed22cc 78% 83%,transparent 83%);clip-path:polygon(0 0,100% 0,100% 14%,0 19%,0 32%,100% 26%,100% 45%,0 51%,0 69%,100% 63%,100% 82%,0 88%,0 100%,100% 100%);mix-blend-mode:screen;animation:glitch-slice .46s steps(5,end) forwards}
+.glitch-screen.active:after{opacity:1;background:repeating-linear-gradient(0deg,transparent 0 3px,#fff2 3px 4px),linear-gradient(90deg,#fb174526,#00eaff26);mix-blend-mode:screen;animation:glitch-static .46s steps(7,end) forwards}
+body.glitching{animation:glitch-jolt .42s steps(2,end)}
+@keyframes glitch-burst{0%{opacity:0}12%{opacity:.82}25%{opacity:.23}39%{opacity:.95}54%{opacity:.5}70%,100%{opacity:1}}
+@keyframes glitch-slice{0%{transform:translate(-8px,-3px) skewX(2deg)}24%{transform:translate(10px,1px) skewX(-3deg)}48%{transform:translate(-5px,0) skewX(1deg)}72%{transform:translate(4px,-1px)}100%{transform:translate(0)}}
+@keyframes glitch-static{0%,100%{opacity:.2}20%{opacity:1}40%{opacity:.35}60%{opacity:.9}80%{opacity:.4}}
+@keyframes glitch-jolt{0%,100%{transform:translate(0)}20%{transform:translate(-3px,1px)}40%{transform:translate(4px,-1px)}60%{transform:translate(-2px,0)}80%{transform:translate(2px,1px)}}
+@media(prefers-reduced-motion:reduce){.glitch-screen.active,.glitch-screen.active:before,.glitch-screen.active:after,body.glitching{animation:none!important}.glitch-screen.active{opacity:1}}
